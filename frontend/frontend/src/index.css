@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0d050d;
+}
+
+.heading-serif {
+  font-family: "DM Serif Display", serif;
+}
+
+.lavender-glow-effect {
+  text-shadow: 0 0 15px rgba(216, 180, 254, 0.4),
+               0 0 30px rgba(167, 139, 250, 0.2);
+}
+
+.thin-border-frame {
+  border: 1px solid rgba(216, 180, 254, 0.15);
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.skill-pill {
+            @apply px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-medium tracking-wide text-white/70  hover:text-white transition-all duration-300;
+        }
