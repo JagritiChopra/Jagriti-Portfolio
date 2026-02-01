@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
-// 🔹 Animation Variants
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -11,9 +12,13 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: -30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
 };
 
 export default function Contact() {
@@ -27,7 +32,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
         >
           <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">
             Get In Touch
@@ -79,18 +84,20 @@ export default function Contact() {
     </div>
 
     <div className="flex items-center gap-6 mt-4 text-white/80">
-      <a
-        href="https://github.com/JagritiChopra"
-        target="_blank"
-        rel="noreferrer"
-        className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/70 hover:text-[#d8b4fe] hover:border-[#d8b4fe]/50 transition"
-      >
-        <FaGithub size={25} />
-      </a>
+        <a
+          href="https://github.com/JagritiChopra"
+          target="_blank"
+         rel="noopener noreferrer"
+
+          className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/70 hover:text-[#d8b4fe] hover:border-[#d8b4fe]/50 transition"
+        >
+          <FaGithub size={25} />
+        </a>
       <a
         href="https://linkedin.com/in/yourusername"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+
         className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/70 hover:text-[#d8b4fe] hover:border-[#d8b4fe]/50 transition"
       >
         <FaLinkedin size={25} />
@@ -98,7 +105,8 @@ export default function Contact() {
       <a
         href="https://x.com/yourusername"
         target="_blank"
-        rel="noreferrer"
+       rel="noopener noreferrer"
+
         className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/70 hover:text-[#d8b4fe] hover:border-[#d8b4fe]/50 transition"
       >
         <FaXTwitter size={25} />

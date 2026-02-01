@@ -1,25 +1,38 @@
 import React from "react";
 import { Github, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+
 
 const Projects: React.FC = () => {
-  // Container variant for header + web projects
-  const webContainerVariants = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.15 } },
-  };
+// Container variant for header + web projects
+const webContainerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
 
-  // Container variant for app projects
-  const appContainerVariants = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.2 } }, // slightly slower stagger
-  };
+// Container variant for app projects
+const appContainerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
 
-  // Animation for each element/card
-  const itemVariants = {
-    hidden: { opacity: 0, y: -30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
+// Animation for each element/card
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: -30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1], // easeOut curve (typed-safe)
+    },
+  },
+};
 
   return (
     <section className="py-32 px-6 lg:px-40 bg-plum-deep" id="projects">
@@ -106,7 +119,7 @@ interface ProjectCardProps {
   imageUrl: string;
   liveUrl: string;
   githubUrl: string;
-  variants?: any;
+variants?: Variants; 
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, subtitle, imageUrl, liveUrl, githubUrl, variants }) => {
@@ -123,9 +136,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, subtitle, imageUrl, li
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2">
                 <h3 className="heading-serif text-3xl text-white group-hover:text-[#d8b4fe] transition-colors">{title}</h3>
-                {/* <a href={githubUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-white/40 hover:text-[#d8b4fe] transition">
+                <a href={githubUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-white/40 hover:text-[#d8b4fe] transition">
                   <Github size={20} />
-                </a> */}
+                </a>
                 <ArrowUpRight className="text-white/30 group-hover:text-[#d8b4fe] group-hover:rotate-45 transition-all" size={22} />
               </div>
               <p className="text-sm text-white/40 font-light tracking-wide uppercase">{subtitle}</p>

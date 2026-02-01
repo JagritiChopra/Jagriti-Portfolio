@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, easeOut } from "framer-motion";
 
 const experiences = [
   {
@@ -21,12 +21,12 @@ export default function Experience() {
 
   const leftVariants = {
     hidden: { opacity: 0, x: -80 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: easeOut } },
   };
 
   const rightVariants = {
     hidden: { opacity: 0, x: 80 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: easeOut } },
   };
 
   return (
