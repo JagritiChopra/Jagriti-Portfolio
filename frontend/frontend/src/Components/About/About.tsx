@@ -3,7 +3,7 @@ import React from "react";
 const About: React.FC = () => {
   return (
     <section
-      className="bg-plum-dark border-y border-white/5 py-32 px-6 lg:px-40"
+      className="bg-[#160115] border-y border-white/5 py-32 px-6 lg:px-40"
       id="about"
     >
       <div className="max-w-[1200px] mx-auto">

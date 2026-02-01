@@ -1,112 +1,137 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
-// ---------- Tailwind-like theme variables ----------
 const COLORS = {
-  plumDark: "#1a0b1a",
   plumDeep: "#0d050d",
   lavenderGlow: "#d8b4fe",
-  softLavender: "#e9d5ff",
-  deepViolet: "#7c3aed",
   dreamyPurple: "#a78bfa",
 };
 
 const FONTS = {
   serif: '"DM Serif Display", serif',
-  sans: '"Inter", sans-serif',
-  display: '"Plus Jakarta Sans", sans-serif',
 };
 
-const SHADOWS = {
-  lavenderGlow: "0 0 15px rgba(216, 180, 254, 0.4), 0 0 30px rgba(167, 139, 250, 0.2)",
-};
-
-const BORDERS = {
-  thinLavender: "1px solid rgba(216, 180, 254, 0.15)",
-  glassPanel: "1px solid rgba(255, 255, 255, 0.08)",
-};
-
-// ---------- Education Data ----------
 const educationData = [
   {
     period: "2022 - 2026",
     degree: "B.Tech in Computer Science and Engineering",
-    school: "University Institute of Engineering and Technology , Maharshi Dayanand University",
-    description:
-      "",
+    school: "University Institute of Engineering and Technology, Maharshi Dayanand University",
     icon: "school",
     iconColor: COLORS.lavenderGlow,
   },
   {
     period: "2020 - 2021",
     degree: "Senior Secondary Education",
-    school: "ZAD Global School, Rohtak 124001 , Haryana ",
-    description:
-      "",
+    school: "ZAD Global School, Rohtak 124001, Haryana",
     icon: "palette",
     iconColor: COLORS.dreamyPurple,
   },
 ];
 
-// ---------- React Component ----------
 const Education: React.FC = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  // Animation for the whole glass card
+  const cardVariants = {
+    hidden: { opacity: 0, y: -60 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  // Animation for items inside the card
+  const itemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  };
+
   return (
     <section
       id="education"
-      style={{ backgroundColor: COLORS.plumDark }}
-      className="py-32 px-6 lg:px-40"
+      ref={ref}
+      className="py-32 px-6 lg:px-40 bg-plumDeep"
     >
-      <div className="max-w-[800px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <h2
-            className="heading-serif text-5xl italic mb-4"
-            style={{ fontFamily: FONTS.serif, color: "#fff" }}
+      <div className="max-w-[900px] mx-auto">
+        {/* Glass Card */}
+        <motion.div
+          className="rounded-[2rem] p-10 bg-plumDeep/80 border border-white/10 backdrop-blur-xl shadow-xl"
+          variants={cardVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {/* Header */}
+          <motion.div
+            className="text-center mb-20"
+            variants={itemVariants}
           >
-            Academic <span style={{ color: COLORS.dreamyPurple }}>Path</span>
-          </h2>
-          <p className="uppercase tracking-widest text-xs font-bold" style={{ color: "rgba(255,255,255,0.4)" }}>
-            Foundation of My Creative Process
-          </p>
-        </div>
+            <h2
+              className="heading-serif text-5xl italic mb-4"
+              style={{ fontFamily: FONTS.serif, color: "#fff" }}
+            >
+              Academic <span style={{ color: COLORS.dreamyPurple }}>Path</span>
+            </h2>
+            <p
+              className="uppercase tracking-widest text-xs font-bold"
+              style={{ color: "rgba(255,255,255,0.4)" }}
+            >
+              Foundation of My Creative Process
+            </p>
+          </motion.div>
 
-        {/* Education Items */}
-        <div className="space-y-12">
-          {educationData.map((item, index) => (
-            <div className="flex gap-10 group" key={index}>
-              <div className="flex flex-col items-center">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
-                  style={{
-                    border: `1px solid rgba(255,255,255,0.1)`,
-                    color: item.iconColor,
-                  }}
-                >
-                  <span className="material-symbols-outlined text-sm font-light">
-                    {item.icon}
-                  </span>
+          {/* Education Items */}
+          <motion.div className="relative pl-12 space-y-18">
+            {/* Vertical line */}
+            <div className="absolute left-16 top-10 bottom-0 w-px bg-white/10"></div>
+
+            {educationData.map((item, index) => (
+              <motion.div
+                key={index}
+                className="flex gap-8 relative z-10"
+                variants={itemVariants}
+              >
+                {/* Icon */}
+                <div className="flex flex-col items-center">
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center text-xl"
+                    style={{
+                      border: "1px solid rgba(255,255,255,0.1)",
+                      color: item.iconColor,
+                    }}
+                  >
+                    <span className="material-symbols-outlined">{item.icon}</span>
+                  </div>
                 </div>
-                {index === 0 && <div className="w-px h-full bg-white/10 mt-4"></div>}
-              </div>
-              <div className="pb-12">
-                <span
-                  className="text-[10px] font-bold tracking-widest uppercase"
-                  style={{ color: item.iconColor + "b3" }} // 70% opacity
-                >
-                  {item.period}
-                </span>
-                <h3 className="heading-serif text-3xl mt-2" style={{ fontFamily: FONTS.serif, color: "#fff" }}>
-                  {item.degree}
-                </h3>
-                <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>
-                  {item.school}
-                </p>
-                <p className="mt-4 font-light leading-relaxed max-w-xl" style={{ color: "rgba(255,255,255,0.6)" }}>
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+
+                {/* Info */}
+                <div className="pb-12">
+                  <span
+                    className="text-[10px] font-bold tracking-widest uppercase"
+                    style={{ color: item.iconColor + "b3" }}
+                  >
+                    {item.period}
+                  </span>
+                  <h3
+                    className="heading-serif text-3xl mt-2"
+                    style={{ fontFamily: FONTS.serif, color: "#fff" }}
+                  >
+                    {item.degree}
+                  </h3>
+                  <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>
+                    {item.school}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

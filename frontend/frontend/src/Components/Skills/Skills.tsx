@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaReact,
   FaHtml5,
@@ -8,7 +9,6 @@ import {
   FaGitAlt,
   FaGithub,
   FaPython,
- 
 } from "react-icons/fa";
 
 import {
@@ -63,7 +63,7 @@ const SKILL_SECTIONS = [
   {
     title: "SaaS & Cloud",
     skills: [
-      { label: "AWS", icon: SiAmazon, color: "#FF9900" },
+      
       { label: "Vercel", icon: SiVercel, color: "#FFFFFF" },
       { label: "Docker", icon: SiDocker, color: "#2496ED" },
       { label: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
@@ -89,57 +89,132 @@ const SKILL_SECTIONS = [
   },
 ];
 
+// 🔹 Animation Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: -40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function Skills() {
   return (
     <section className="py-20 px-6 lg:px-40" id="skills">
       <div className="max-w-[1200px] mx-auto">
-        <div className="flex flex-col gap-4 mb-20 text-center">
+
+        {/* Heading */}
+        <motion.div
+          className="flex flex-col gap-4 mb-20 text-center"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">
             Capabilities
           </span>
           <h2 className="heading-serif text-6xl text-white italic leading-none">
             Skills &amp; <span className="lavender-glow-effect">Expertise</span>
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Cards Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {SKILL_SECTIONS.map((section) => (
             <SkillCard key={section.title} {...section} />
           ))}
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );
 }
 
-function SkillCard({ title, skills }: { title: string; skills: Array<{ label: string; icon: React.ComponentType; color: string }> }) {
+function SkillCard({
+  title,
+  skills,
+}: {
+  title: string;
+  skills: Array<{ label: string; icon: React.ComponentType; color: string }>;
+}) {
   return (
-    <div className="glass-panel p-6 rounded-[1.2rem] border border-white/60 bg-white/[0.06] hover:bg-white/[0.14] backdrop-blur-xl shadow-xl hover:shadow-lg transform transition-all duration-300 ease-out hover:scale-[1.06] hover:-translate-y-2 hover:border-white/80 group">
+    <motion.div
+      variants={cardVariants}
+      className="glass-panel p-6 rounded-[1.2rem] border border-white/60 bg-white/[0.06] hover:bg-white/[0.14] backdrop-blur-xl shadow-xl hover:shadow-lg transform transition-all duration-300 ease-out hover:scale-[1.06] hover:-translate-y-2 hover:border-white/80 group"
+    >
       <h3 className="heading-serif text-xl text-white text-center mb-4">
         {title}
       </h3>
       <div className="flex flex-wrap gap-4 justify-center">
         {skills.map((skill) => (
-          <Skill key={skill.label} icon={skill.icon} label={skill.label} color={skill.color} />
+          <Skill key={skill.label} {...skill} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
-
-function Skill({ icon: Icon, label, color }: { icon: React.ComponentType; label: string; color: string }) {
+function Skill({
+  icon: Icon,
+  label,
+  color,
+}: {
+  icon: React.ComponentType;
+  label: string;
+  color: string;
+}) {
   return (
-    <div className="relative group flex flex-col items-center">
-      <div
-        className=" text-3xl transition transform group-hover:scale-110"
+    <motion.div
+      className="
+        relative flex flex-col items-center justify-center
+        w-10 h-10 rounded-xl
+        bg-white/[0.05] backdrop-blur-md shadow-md
+        border border-transparent
+      "
+      whileHover={{
+        scale: 1.2,
+        y: -8,
+        boxShadow: "0px 10px 20px rgba(255,255,255,0.2)",
+        backgroundColor: "rgba(255,255,255,0.12)",
+        borderColor: "rgba(255,255,255,0.3)",
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 200,
+        damping: 18,
+      }}
+    >
+      <motion.div
+        className="text-3xl"
         style={{ color }}
+        whileHover={{ scale: 1.15 }}
+        transition={{ type: "spring", stiffness: 200, damping: 20 }}
       >
         <Icon />
-      </div>
-      <span className="absolute -bottom-6 text-xs text-white opacity-0 group-hover:opacity-100 transition">
+      </motion.div>
+      <motion.span
+        className="absolute -bottom-6 text-xs text-white"
+        initial={{ opacity: 0 }}
+        whileHover={{ opacity: 1, y: -4 }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
+      >
         {label}
-      </span>
-    </div>
+      </motion.span>
+    </motion.div>
   );
 }
