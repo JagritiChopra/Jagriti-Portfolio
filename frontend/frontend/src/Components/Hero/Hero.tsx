@@ -64,8 +64,7 @@ const Hero: React.FC = () => {
               className="aspect-[4/5] bg-cover bg-center rounded-[2rem] shadow-2xl"
               style={{
                 backgroundImage:
-                  'url("https://lh3.googleusercontent.com/aida-public/AB6AXuABqhpvuA5OH6UuGHJCdPvd3B6-s6s8bOEpGi3FuMdzrsOcU0QQsmcOnnTy0aiykd7QNDklMvQOT1Q_YJVx0X72NiJfpy9g6TwahqfbGcTarnPDJLrmqeOHt_TOS4SXVF0-YbpIDgrYhkWckNF7A0GQDmBA_Tv_Nf9H5s0qIkVyCKmO_rd6Yq5z9cP9Pnf7aVwYZqzNZPyrjOpfL7p65Kdx3F5l_SNg1ImyZqS71E7rOqFP-fEOoedeMA_ltXvGzQvpnVW0o879n-Yj")',
-              }}
+                 `url("/image.png")`,   }}
             />
           </div>
         </motion.div>
