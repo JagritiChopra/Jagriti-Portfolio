@@ -1,5 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
+
+import { motion, type Variants } from "framer-motion";
+
 import {
   FaReact,
   FaHtml5,
@@ -21,7 +22,7 @@ import {
   SiMysql,
   SiFirebase,
   SiSupabase,
-  SiAmazon,
+ 
   SiVercel,
   SiPostman,
   SiFigma,
@@ -89,8 +90,8 @@ const SKILL_SECTIONS = [
   },
 ];
 
-// 🔹 Animation Variants
-const containerVariants = {
+// Container for the skill section
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -98,7 +99,8 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+// Each card
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: -40 },
   show: {
     opacity: 1,
@@ -106,6 +108,26 @@ const cardVariants = {
     transition: { duration: 0.6, ease: "easeOut" },
   },
 };
+
+
+
+// // 🔹 Animation Variants
+// const containerVariants = {
+//   hidden: { opacity: 0 },
+//   show: {
+//     opacity: 1,
+//     transition: { staggerChildren: 0.12 },
+//   },
+// };
+
+// const cardVariants = {
+//   hidden: { opacity: 0, y: -40 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { duration: 0.6, ease: "easeOut" },
+//   },
+// };
 
 export default function Skills() {
   return (

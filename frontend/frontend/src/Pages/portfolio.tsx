@@ -492,7 +492,8 @@ const LavenderMidnightPortfolio: React.FC = () => {
       </footer>
 
       {/* Styles - Note: In a real TSX project, these would typically be in a separate CSS file */}
-      <style jsx>{`
+      <style >
+        {`
         .heading-serif {
           font-family: 'DM Serif Display', serif;
         }
@@ -512,7 +513,8 @@ const LavenderMidnightPortfolio: React.FC = () => {
         .skill-pill {
           @apply px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-medium tracking-wide text-white/70 hover:border-lavender-accent hover:text-white transition-all duration-300;
         }
-      `}</style>
+      `}
+      </style>
     </div>
   );
 };
