@@ -95,7 +95,7 @@ const itemVariants: Variants = {
           <span className="lavender-glow-effect block text-center"> Frontend Projects </span>
         </motion.h2>
 
-        {/* App Project Grid with separate animation */}
+        {/* Frontend Project Grid with separate animation */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 mt-10"
           initial="hidden"
@@ -105,8 +105,10 @@ const itemVariants: Variants = {
         >
           <ProjectCard title="MyyGlam" subtitle="Ecommerce Mobile App" imageUrl="/myyglam.png" liveUrl="https://myyyyy-glam.vercel.app/" githubUrl="https://github.com/JagritiChopra/myyyyy-glam" variants={itemVariants} />
           <ProjectCard title="Aurora" subtitle="Ecommerce Website of Norway theme" imageUrl="/Aurora.png" liveUrl="https://aurura.vercel.app/" githubUrl="https://github.com/JagritiChopra/Aurura" variants={itemVariants} />
+          <ProjectCard title="The Bloom and Books" subtitle="Cafe's website" imageUrl="/Bloom.png" liveUrl="https://the-bloom-and-brew-cafe.vercel.app/" githubUrl="https://github.com/JagritiChopra/The-Bloom-and-Brew-Cafe" variants={itemVariants} />
+         
            </motion.div>
-      </motion.div>
+      
 
 
         <motion.hr className="my-12 border-white/40" variants={itemVariants} />
@@ -135,6 +137,7 @@ const itemVariants: Variants = {
           <ProjectCard title="VibeMart" subtitle="Ecommerce Mobile App" imageUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuDUDVG4gur3EyknBTcha5hzCAJaZI7C_vcoNfmDE3Qk2ABY6-kD0rvieTtUseQQhZcFruGOyX54nOzfbQaNssFT-FGawqCujDzIEKiMIuzoIBsz9SIQS0tNKZB5Pf54cK1_k3u5vti5Hz4KU8GVMcKLStv73EHgbC3Z0AaOaayYGTc4s3P-oXS1Q_mSrrVpDh_ujYui4mFFfV2k9yAF4rYhHE38hKXlztEQ0xEYH16EgjlB_lKAVnFyzPIsQRk3quSdCePWxaNfei9p" liveUrl="https://lumina-wellness.vercel.app" githubUrl="https://github.com/JagritiChopra/E-Commerce-Mobile-App" variants={itemVariants} />
           <ProjectCard title="RailYatri" subtitle="Train Search Mobile App" imageUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuCoIaaQ3pqJV0rGa5iSgQzL6wJi6-MMc3-KftQshco2nv-zb2qKy_dYH7mbXjSDTDdftzUl0VvopE41OKIz3HGcvtH9jA1TYDtXjmwy4IFObew_wzrjP7kNE2eD1MMGWmUIJmVlnFQ3PgLXEmBi8wEL-RDnR1rbInS3c7s6FDXW-Saeu8sKLHYX5994RHYG5-mZGSOl55hXkvWu91rGdxK-wLXu2QirXLNUCmqAWEETTWGXo-YkoVECfbZAFiEjUebdtmTniuUPYu4m" liveUrl="https://lumina-wellness.vercel.app" githubUrl="https://github.com/JagritiChopra/RailYatri" variants={itemVariants} />
            </motion.div>
+
       </motion.div>
 
 
