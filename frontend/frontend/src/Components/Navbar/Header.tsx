@@ -6,12 +6,12 @@ const Header: React.FC = () => {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Hero", path: "/hero" },
+  
     { name: "Skills", path: "/skills" },
-    { name: "Work", path: "/work" },
+   
     { name: "Projects", path: "/projects" },
     { name: "Education", path: "/education" },
-    { name: "Experience", path: "/experience" },
+
     { name: "Contact", path: "/contact" },
   ];
 
