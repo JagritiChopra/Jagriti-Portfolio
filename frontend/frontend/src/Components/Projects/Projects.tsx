@@ -77,7 +77,7 @@ const itemVariants: Variants = {
         >
           <ProjectCard title="Bhaav-Book" subtitle="Journal & Mood Tracker" imageUrl="/bhaavBook.png" liveUrl="https://mind-echo-xxlv.vercel.app" githubUrl="https://github.com/JagritiChopra/Mind-Echo" variants={itemVariants} />
           <ProjectCard title="FinAura" subtitle="Finance Advisor" imageUrl="/finAura.png" liveUrl="https://finaura-pi.vercel.app" githubUrl="https://github.com/JagritiChopra/finAura" variants={itemVariants} />
-          <ProjectCard title="Remote Interview Platform" subtitle="Interview Platform" imageUrl="/resumeMate.png" liveUrl="https://resume-mate-rd85-92g76riw8-jagritis-projects-319bdbb0.vercel.app/" githubUrl="https://github.com/JagritiChopra/ResumeMate" variants={itemVariants} />
+          <ProjectCard title="ResumeMate" subtitle="ResumeMate" imageUrl="/resumeMate.png" liveUrl="https://resume-mate-rd85-92g76riw8-jagritis-projects-319bdbb0.vercel.app/" githubUrl="https://github.com/JagritiChopra/ResumeMate" variants={itemVariants} />
           <ProjectCard title="Explore More Projects" subtitle="Explore More on Github" imageUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuDNtPhuI4swWrYmrw2yKHJ40XyX94CCZYr1W2ysvt8kSAp1tBG9oDZfHc_oxjVfn0s9o4CTpih-XukNpPM4EpC8-VvEgEvCi8ct6oZpA3ZA5vn0i9CsVCIquYkSu5MXsDJG6KU99SR2m6CEC4Z0YPeIJDhVZC1YiJ_CLwBMRitCiFKiDYhwR22GLqer5OOwwnxF_NH66nJjl2CTwfdyZj_sNxAf4vGzZYiImKLaj7nmm4EXz6i_dBCjqczScTFKSnH3NvgzTD8iTTbR" liveUrl="https://github.com/JagritiChopra/" githubUrl="https://github.com/JagritiChopra" variants={itemVariants} />
         </motion.div>
 

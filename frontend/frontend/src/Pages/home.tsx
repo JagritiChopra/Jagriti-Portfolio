@@ -7,7 +7,7 @@ import Education from '../Components/Education/Education';
 import Projects from '../Components/Projects/Projects';
 import Hero from '../Components/Hero/Hero';
 import Skills from '../Components/Skills/Skills';
-import Experience from '../Components/Experience/Experience';
+// import Experience from '../Components/Experience/Experience';
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Skills />
-      <Experience />
+      {/* <Experience /> */}
       <Projects />
       <Education />
       <Contact />
