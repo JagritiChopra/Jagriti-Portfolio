@@ -106,6 +106,7 @@ const itemVariants: Variants = {
           <ProjectCard title="MyyGlam" subtitle="Ecommerce Mobile App" imageUrl="/myyglam.png" liveUrl="https://myyyyy-glam.vercel.app/" githubUrl="https://github.com/JagritiChopra/myyyyy-glam" variants={itemVariants} />
           <ProjectCard title="Aurora" subtitle="Ecommerce Website of Norway theme" imageUrl="/Aurora.png" liveUrl="https://aurura.vercel.app/" githubUrl="https://github.com/JagritiChopra/Aurura" variants={itemVariants} />
           <ProjectCard title="The Bloom and Books" subtitle="Cafe's website" imageUrl="/Bloom.png" liveUrl="https://the-bloom-and-brew-cafe.vercel.app/" githubUrl="https://github.com/JagritiChopra/The-Bloom-and-Brew-Cafe" variants={itemVariants} />
+         <ProjectCard title="The CakeSmith" subtitle="Cafe's website" imageUrl="/smith.png" liveUrl="https://cake-smithin.vercel.app/" githubUrl="https://github.com/JagritiChopra/CakeSmithin" variants={itemVariants} />
          
            </motion.div>
       
@@ -134,8 +135,8 @@ const itemVariants: Variants = {
           viewport={{ once: true, amount: 0.2 }}
           variants={appContainerVariants} // separate container
         >
-          <ProjectCard title="VibeMart" subtitle="Ecommerce Mobile App" imageUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuDUDVG4gur3EyknBTcha5hzCAJaZI7C_vcoNfmDE3Qk2ABY6-kD0rvieTtUseQQhZcFruGOyX54nOzfbQaNssFT-FGawqCujDzIEKiMIuzoIBsz9SIQS0tNKZB5Pf54cK1_k3u5vti5Hz4KU8GVMcKLStv73EHgbC3Z0AaOaayYGTc4s3P-oXS1Q_mSrrVpDh_ujYui4mFFfV2k9yAF4rYhHE38hKXlztEQ0xEYH16EgjlB_lKAVnFyzPIsQRk3quSdCePWxaNfei9p" liveUrl="https://lumina-wellness.vercel.app" githubUrl="https://github.com/JagritiChopra/E-Commerce-Mobile-App" variants={itemVariants} />
-          <ProjectCard title="RailYatri" subtitle="Train Search Mobile App" imageUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuCoIaaQ3pqJV0rGa5iSgQzL6wJi6-MMc3-KftQshco2nv-zb2qKy_dYH7mbXjSDTDdftzUl0VvopE41OKIz3HGcvtH9jA1TYDtXjmwy4IFObew_wzrjP7kNE2eD1MMGWmUIJmVlnFQ3PgLXEmBi8wEL-RDnR1rbInS3c7s6FDXW-Saeu8sKLHYX5994RHYG5-mZGSOl55hXkvWu91rGdxK-wLXu2QirXLNUCmqAWEETTWGXo-YkoVECfbZAFiEjUebdtmTniuUPYu4m" liveUrl="https://lumina-wellness.vercel.app" githubUrl="https://github.com/JagritiChopra/RailYatri" variants={itemVariants} />
+          <ProjectCard title="Pet-hospital" subtitle=" Mobile App" imageUrl="/pet-hospital.jpeg" liveUrl="https://expo.dev/artifacts/eas/dWgK6nbNG8VGK1SMhHxNSS.apk" githubUrl="https://github.com/JagritiChopra/Pet-Hospital-Mobile-App" variants={itemVariants} />
+          <ProjectCard title="RailYatri" subtitle="Train Search Mobile App" imageUrl="/where-is.jpeg"  liveUrl="https://github.com/JagritiChopra/RailYatri" githubUrl="https://github.com/JagritiChopra/RailYatri" variants={itemVariants} />
            </motion.div>
 
       </motion.div>
