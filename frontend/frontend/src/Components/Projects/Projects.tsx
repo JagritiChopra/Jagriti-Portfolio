@@ -108,7 +108,7 @@ const itemVariants: Variants = {
           <ProjectCard title="The Bloom and Books" subtitle="Cafe's website" imageUrl="/Bloom.png" liveUrl="https://the-bloom-and-brew-cafe.vercel.app/" githubUrl="https://github.com/JagritiChopra/The-Bloom-and-Brew-Cafe" variants={itemVariants} />
           <ProjectCard title="The CakeSmith" subtitle="Cafe's website" imageUrl="/smith.png" liveUrl="https://cake-smithin.vercel.app/" githubUrl="https://github.com/JagritiChopra/CakeSmithin" variants={itemVariants} />
           <ProjectCard title="Raja Yoga Healing" subtitle="Sound Healing Website" imageUrl="/sound-healing.png" liveUrl="https://sound-healing-frontend.vercel.app/" githubUrl="https://github.com/JagritiChopra/sound-healing-frontend" variants={itemVariants} />
-          <ProjectCard title="Code Crafter Pvt Ltd" subtitle="Internship Providers" imageUrl="/CodeCrafter.png" liveUrl="https://https://code-crafters-opal.vercel.app/" githubUrl="https://github.com/JagritiChopra/CodeCrafters" variants={itemVariants} />
+          <ProjectCard title="Code Crafter Pvt Ltd" subtitle="Internship Providers" imageUrl="/CodeCrafter.png" liveUrl="https://code-crafters-opal.vercel.app/" githubUrl="https://github.com/JagritiChopra/CodeCrafters" variants={itemVariants} />
          
            </motion.div>
       
