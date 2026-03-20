@@ -139,6 +139,7 @@ const itemVariants: Variants = {
         >
           <ProjectCard title="Pet-hospital" subtitle=" Mobile App" imageUrl="/pet-hospital.jpeg" liveUrl="https://expo.dev/artifacts/eas/dWgK6nbNG8VGK1SMhHxNSS.apk" githubUrl="https://github.com/JagritiChopra/Pet-Hospital-Mobile-App" variants={itemVariants} />
           <ProjectCard title="RailYatri" subtitle="Train Search Mobile App" imageUrl="/where-is.jpeg"  liveUrl="https://github.com/JagritiChopra/RailYatri" githubUrl="https://github.com/JagritiChopra/RailYatri" variants={itemVariants} />
+           <ProjectCard title="Managing Maladaptive Daydreaming" subtitle="Productivity / self-help" imageUrl="/managing-md.jpeg"  liveUrl="https://github.com/JagritiChopra/Managing-MD" githubUrl="https://github.com/JagritiChopra/Managing-MD" variants={itemVariants} />
            </motion.div>
 
       </motion.div>
