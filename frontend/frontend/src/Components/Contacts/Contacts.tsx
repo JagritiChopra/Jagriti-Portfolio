@@ -94,7 +94,7 @@ export default function Contact() {
           <FaGithub size={25} />
         </a>
       <a
-        href="https://linkedin.com/in/yourusername"
+        href="https://linkedin.com/in/jagriti-chopra-"
         target="_blank"
         rel="noopener noreferrer"
 
@@ -103,7 +103,7 @@ export default function Contact() {
         <FaLinkedin size={25} />
       </a>
       <a
-        href="https://x.com/yourusername"
+        href="https://x.com/JagritiCho98921
         target="_blank"
        rel="noopener noreferrer"
 
