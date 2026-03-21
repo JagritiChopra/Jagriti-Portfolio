@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-
+https://github.com/JagritiChopra/Jagriti-Portfolio/security
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const containerVariants: Variants = {
@@ -103,7 +103,7 @@ export default function Contact() {
         <FaLinkedin size={25} />
       </a>
       <a
-        href="https://x.com/JagritiCho98921
+        href="https://x.com/JagritiCho98921"
         target="_blank"
        rel="noopener noreferrer"
 
