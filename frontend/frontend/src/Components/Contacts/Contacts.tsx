@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-https://github.com/JagritiChopra/Jagriti-Portfolio/security
+
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const containerVariants: Variants = {
